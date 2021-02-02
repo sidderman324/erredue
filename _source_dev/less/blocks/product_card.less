@@ -1,0 +1,82 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/product_card.less';
+
+
+.product_card {
+  .head {
+    padding: 5.3em 0 4.4em;
+
+    .container {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .img_wrapper {
+        width: 36.3em;
+        margin-right: 6em;
+        border: 1px solid @blue;
+      }
+
+      .text_box {
+        margin-bottom: 1em;
+        .category_link {
+          display: inline-block;
+          text-decoration: underline;
+          margin-bottom: 1em;
+        }
+      }
+
+    }
+  }
+
+  .content_box {
+    background-color: #fff;
+    padding: 1.7em 0;
+
+    h2 {
+      margin-bottom: .9em;
+      font-size: 2.1875em;
+      color: @blue;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.25em;
+      margin-bottom: 1em;
+      line-height: 1.3;
+    }
+
+    a {
+      font-size: 1.25em;
+      text-decoration: underline;
+      display: inline-block;
+      margin: 1em 0;
+      line-height: 1.3;
+      color: @blue;
+    }
+
+
+    .gallery {
+      margin: 1em 0;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      .gallery_item {
+        width: 17.8em;
+        margin-right: 2.2em;
+        border: 1px solid @blue;
+        cursor: pointer;       
+
+        img {
+
+        }
+      }
+    }
+
+  }
+}

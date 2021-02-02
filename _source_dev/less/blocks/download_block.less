@@ -1,0 +1,30 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/download_block.less';
+
+
+.download_block {
+  padding: 6em 0;
+
+  .container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: inline-block;
+      text-align: center;
+
+      svg {
+        width: 4em;
+        height: 3.5em;
+        margin-right: 2.9em;
+      }
+
+      .text_download {
+        font-weight: bold;
+        color: @blue;
+      }
+    }
+  }
+}

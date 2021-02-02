@@ -1,0 +1,31 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/content_block.less';
+
+
+.content_block {
+  padding: 3.8em 0;
+
+  .text_box {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .section_title {
+      text-transform: uppercase;
+      margin-bottom: .5em;
+      display: inline-block;
+    }
+
+    .text {
+      text-align: justify;
+    }
+  }
+
+
+  &--narrow {
+    .text_box {
+      width: 51%;
+    }
+  }
+}

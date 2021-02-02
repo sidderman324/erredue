@@ -1,0 +1,89 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/header.less';
+
+
+.page-header {
+  padding: 1em 0 2.5em 0;
+  border-bottom: 3px solid @blue;
+  background-image: url('../imgs/header_bgr.png');
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff;
+
+  @media (max-width: 1480px) {
+    padding-bottom: 1em;
+  }
+
+  .container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+
+    @media (max-width: 1480px) {
+      flex-direction: column;
+    }
+
+    .logo_wrapper {
+      width: 18.4em;
+      max-width: 299px;
+      margin-top: 1.3em;
+
+      @media (max-width: 1480px) {
+        width: 14em;
+        margin-top: 0;
+        margin-bottom: 1.8em;
+      }
+
+      a {
+        img {
+
+        }
+      }
+    }
+    .main_menu {
+      margin-left: auto;
+      position: relative;
+      top: -.5em;
+
+      ul {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: row;
+        li {
+          list-style-type: none;
+
+          a.main_menu_link {
+            color: @blue;
+            font-weight: 600;
+            margin-left: 1.3em;
+          }
+        }
+      }
+    }
+
+    .lang_box {
+      position: absolute;
+      top: 0;
+      right: 30px;
+
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: row;
+      a {
+        margin-left: 1.1em;
+        width: 4.3em;
+        display: inline-block;
+        img {
+
+        }
+      }
+    }
+  }
+
+}

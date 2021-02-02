@@ -1,0 +1,39 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/textpage.less';
+
+
+.textpage {
+  padding: 4.2em 0;
+  h2 {
+    font-size: 2.1875em;
+    color: @blue;
+    margin-bottom: .9em;
+    font-weight: bold;
+  }
+  p,li {
+    font-size: 1.25em;
+    margin-bottom: 1em;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  ul {
+    li {
+      list-style-type: none;
+      position: relative;
+      padding-left: 2.7em;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 0.4em;
+        left: 1.6em;
+        border-radius: 50%;
+        background-color: #000;
+      }
+    }
+  }
+
+}

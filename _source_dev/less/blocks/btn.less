@@ -1,0 +1,46 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/btn.less';
+
+
+.btn {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  align-items: center;
+  padding: .6em .8em;
+  position: relative;
+  font-weight: bold;
+
+  &--blue {
+    background-color: @blue;
+    color: #fff;
+  }
+  &--white {
+    background-color: @white;
+    color: @blue;
+    border: 1px solid @blue;
+  }
+
+  &--right-arrow {
+    padding-right: 3em;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: .6em;
+      height: .6em;
+      border-bottom: 3px solid;
+      border-right: 3px solid;
+      position: absolute;
+      top: 50%;
+      right: 1em;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}
+
+.btn--blue.btn--right-arrow {
+  &:before {
+    border-bottom: 3px solid @white;
+    border-right: 3px solid @white;  
+  }
+}

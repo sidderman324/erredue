@@ -1,0 +1,102 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/products_types.less';
+
+
+.products_types {
+  padding: 4.2em 0 6.5em;
+
+  .container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .product_type {
+      position: relative;
+      width: 42.4%;
+
+      &:hover {
+        a span {
+          opacity: 1;
+        }
+        .img_wrapper:before {
+          opacity: 1;
+        }
+      }
+
+      &--white {
+        .head {
+          background-color: #fff;
+          border: 1px solid @blue;
+          color: @blue;
+        }
+      }
+      &--blue {
+        .head {
+          background-color: @blue;
+          color: @white;
+        }
+      }
+
+      a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        span {
+          position: absolute;
+          top: 55%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: .3s;
+
+          svg {
+            width: 5em;
+            height: 5em;
+
+          }
+        }
+      }
+
+      .head {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.4em;
+
+        p {
+          font-weight: bold;
+        }
+      }
+
+      .img_wrapper {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(0,0,0,.5);
+          transition: .3s;
+          opacity: 0;
+        }
+        img {
+
+        }
+      }
+    }
+  }
+
+
+}
