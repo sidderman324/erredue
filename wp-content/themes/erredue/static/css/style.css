@@ -2667,7 +2667,13 @@ body > p font.notetext {
       justify-content: center;
 }
 .download_block .container a {
-  display: inline-block;
+  display: -ms-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   text-align: center;
 }
 .download_block .container a svg {
@@ -2731,6 +2737,7 @@ body > p font.notetext {
 .products_types .container .product_type a span svg {
   width: 5em;
   height: 5em;
+  fill: none;
 }
 .products_types .container .product_type .head {
   display: -ms-flex;
@@ -2783,6 +2790,14 @@ body > p font.notetext {
   border: 1px solid #1D52A5;
   position: relative;
 }
+.catalog .catalog_list .catalog_card .catalog_card_link {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 .catalog .catalog_list .catalog_card:hover .text_box {
   background-color: #1D52A5;
 }
@@ -2799,7 +2814,7 @@ body > p font.notetext {
 .catalog .catalog_list .catalog_card .img_wrapper {
   position: relative;
   border-bottom: 1px solid #1D52A5;
-  height: 16.6em;
+  height: 22em;
   overflow: hidden;
 }
 .catalog .catalog_list .catalog_card .img_wrapper .hover {
@@ -2818,6 +2833,7 @@ body > p font.notetext {
   top: 50%;
   left: 50%;
   width: 5.2em;
+  fill: none;
   opacity: .8;
 }
 .catalog .catalog_list .catalog_card .text_box {
@@ -2866,6 +2882,9 @@ body > p font.notetext {
 }
 .catalog--applicazioni .catalog_list .catalog_card .title_box:after {
   display: none;
+}
+.catalog--applicazioni .catalog_list .catalog_card .img_wrapper {
+  height: 16.3em;
 }
 .catalog--applicazioni .catalog_list .catalog_card .text_box {
   height: 8em;

@@ -19,10 +19,10 @@
       </p>
 
       <div class="social_link_block">
-        <div class="social_item"><a href="#"><svg class="svgIconPhone"><use xlink:href="#fb_icon"></use></svg></a></div>
-        <div class="social_item"><a href="#"><svg class="svgIconPhone"><use xlink:href="#gplus_icon"></use></svg></a></div>
-        <div class="social_item"><a href="#"><svg class="svgIconPhone"><use xlink:href="#in_icon"></use></svg></a></div>
-        <div class="social_item"><a href="#"><svg class="svgIconPhone"><use xlink:href="#t_icon"></use></svg></a></div>
+        <div class="social_item"><a href="#"><svg class="svg_icon"><use xlink:href="#fb_icon"></use></svg></a></div>
+        <div class="social_item"><a href="#"><svg class="svg_icon"><use xlink:href="#gplus_icon"></use></svg></a></div>
+        <div class="social_item"><a href="#"><svg class="svg_icon"><use xlink:href="#in_icon"></use></svg></a></div>
+        <div class="social_item"><a href="#"><svg class="svg_icon"><use xlink:href="#t_icon"></use></svg></a></div>
       </div>
     </div>
     <div class="column">
