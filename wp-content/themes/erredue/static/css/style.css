@@ -2390,6 +2390,13 @@ body > p font.notetext {
   text-align: justify;
   margin-top: 3em;
 }
+.promo--header .container .text_box .link,
+.image_bgr--header .container .text_box .link {
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+  width: 100%;
+}
 .promo--header-small .container,
 .image_bgr--header-small .container {
   min-height: 19.5em;
@@ -2998,7 +3005,7 @@ body > p font.notetext {
   border: 1px solid #1D52A5;
 }
 .input_box textarea {
-  max-height: 9.9em;
+  height: 9.9em;
 }
 .input_box input::-webkit-input-placeholder {
   color: #413F3C;
