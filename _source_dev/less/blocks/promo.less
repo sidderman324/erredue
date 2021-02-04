@@ -107,8 +107,15 @@
 .image_bgr {
   overflow: visible;
 
-  .title {
+  p.title {
     margin-bottom: 1em;
+  }
+  .text p {
+    margin-bottom: 1em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 .text_blue_box {

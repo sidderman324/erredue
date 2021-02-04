@@ -2291,7 +2291,8 @@ body > p font.notetext {
 .page-header .container .main_menu ul li {
   list-style-type: none;
 }
-.page-header .container .main_menu ul li a.main_menu_link {
+.page-header .container .main_menu ul li a {
+  font-size: 1.25em;
   color: #1D52A5;
   font-weight: 600;
   margin-left: 1.3em;
@@ -2418,8 +2419,14 @@ body > p font.notetext {
 .image_bgr {
   overflow: visible;
 }
-.image_bgr .title {
+.image_bgr p.title {
   margin-bottom: 1em;
+}
+.image_bgr .text p {
+  margin-bottom: 1em;
+}
+.image_bgr .text p:last-of-type {
+  margin-bottom: 0;
 }
 .text_blue_box {
   position: absolute;
@@ -2539,8 +2546,9 @@ body > p font.notetext {
   width: 100%;
   background-image: url('../imgs/it_flag_wide.svg');
 }
-.produced_block .container .text_box .text {
+.produced_block .container .text_box p {
   text-align: justify;
+  font-size: 1.5625em;
 }
 .produced_block .container .produced_circle {
   background-color: #1D52A5;

@@ -5,6 +5,8 @@
         <img src="/wp-content/themes/erredue/static/imgs/erredue_logo_header_small.png" alt="">
       </a>
     </div>
+    
+
 
     <nav class="main_menu">
       <ul>
@@ -19,10 +21,6 @@
       </ul>
     </nav>
 
-    <div class="lang_box">
-      <a href="#"><img src="/wp-content/themes/erredue/static/imgs/flag_it.png" alt=""></a>
-      <a href="#"><img src="/wp-content/themes/erredue/static/imgs/flag_eng.png" alt=""></a>
-      <a href="#"><img src="/wp-content/themes/erredue/static/imgs/flag_rus.png" alt=""></a>
-    </div>
+
   </div>
 </div>
