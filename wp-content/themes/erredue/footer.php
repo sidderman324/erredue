@@ -51,7 +51,7 @@
 
   </div>
 </div>
-<script src="<?= get_stylesheet_directory_uri() . '/static/js/script.js'; ?>"></script>
+<script src="<?= get_stylesheet_directory_uri() . '/static/js/script.min.js'; ?>"></script>
 <?php wp_footer(); ?>
 
 </body>

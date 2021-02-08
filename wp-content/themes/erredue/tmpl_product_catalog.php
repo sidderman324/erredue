@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: Каталог продукции
+Template Post Type: page
 */
 
 get_header();
@@ -37,29 +38,35 @@ if($type == 'small') {
       <?php
       $production_type = get_field('production_type');
 
-      $production = new WP_Query(array('post_type' => 'production', 'posts_per_page' => -1, 'order' => 'ASC')); ?>
+      if($production_type == 'ind') {
+        $prod_type = 'product_industr';
+      } else if($production_type == 'labs') {
+        $prod_type = 'product_labs';
+      }
+
+      $production = new WP_Query(array('post_type' => $prod_type, 'posts_per_page' => -1, 'order' => 'ASC')); ?>
 
       <?php if ( $production->have_posts() ) : while ( $production->have_posts() ) : $production->the_post();
       $slug = $production->post->post_name;
       ?>
 
-      <?php if (get_field('production_type')['value'] == $production_type) { ?>
         <div class="catalog_card">
           <div class="img_wrapper">
-            <img src="/wp-content/themes/erredue/static/imgs/catalog/prod_1.jpg" alt="">
+            <img src="<?= get_field('catalog_image'); ?>" alt="">
             <div class="hover"><svg class="svg_icon"><use xlink:href="#plus_icon"></use></svg></div>
           </div>
 
           <div class="text_box">
             <div class="title_box">
-              <p class="title text_size_l">GENERATORI DI IDROGENO SIRIO</p>
+              <p class="title text_size_l"><?= get_field('title'); ?></p>
             </div>
-            <p class="text text_size_m">nitroBox è un sistema semplice e compatto per la produzione di azoto pressurizzato direttamente dove serve</p>
+            <?php if(get_field('short_description')) { ?>
+              <p class="text text_size_m"><?= get_field('short_description'); ?></p>
+            <?}?>
           </div>
 
           <a href="<?php the_permalink(); ?>" class="catalog_card_link"></a>
         </div>
-      <? } ?>
 
     <?php endwhile; ?>
   <?php endif; ?>

@@ -22,13 +22,13 @@ get_header();
     <div class="button_box">
       <?php
       if(pll_current_language('slug') == 'it') {
-        $btns = ['GAS PER LABORATORIO','GAS INDUSTRIALI'];
+        $lang_setup = ["GAS INDUSTRIALI","/products/industrial/","GAS PER LABORATORIO","/products/laboratory/"];
       } else if(pll_current_language('slug') == 'en') {
-        $btns = ['Gas for Laboratory','Gas for the Industry'];
+        $lang_setup = ["Gas for the Industry","/products/industrial/","Gas for Laboratory","/products/laboratory/"];
       }
       ?>
-      <a href="#" class="btn btn--blue text_size_l btn--right-arrow"><?= $btns[0]; ?></a>
-      <a href="#" class="btn btn--white text_size_l btn--right-arrow"><?= $btns[1]; ?></a>
+      <a href="<?= $lang_setup[3]; ?>" class="btn btn--blue text_size_l btn--right-arrow"><?= $lang_setup[2]; ?></a>
+      <a href="<?= $lang_setup[1]; ?>" class="btn btn--white text_size_l btn--right-arrow"><?= $lang_setup[0]; ?></a>
     </div>
 
   </div>

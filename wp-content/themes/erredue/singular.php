@@ -1,7 +1,7 @@
 <?php
 /*
 * Template name: Страница продукта
-* Template post type: post, page
+* Template post type: post
 */
 
 get_header();

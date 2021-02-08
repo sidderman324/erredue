@@ -2711,8 +2711,8 @@ body > p font.notetext {
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-align: start;
       align-items: flex-start;
 }
@@ -3140,6 +3140,25 @@ body > p font.notetext {
   margin: 1em 0;
   line-height: 1.3;
   color: #1D52A5;
+}
+.product_card .content_box ul li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 2.7em;
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  line-height: 1.3;
+}
+.product_card .content_box ul li:before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 0.4em;
+  left: 1.6em;
+  border-radius: 50%;
+  background-color: #000;
 }
 .product_card .content_box .gallery {
   margin: 1em 0;

@@ -32,7 +32,7 @@
         <a href="<?= $link; ?>">
           <img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/erredue_logo_header_small.png" alt="">
         </a>
-        
+
       </div>
 
       <?php

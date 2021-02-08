@@ -1,7 +1,7 @@
 <?php
 /*
-Template Name: Типа продуктов
-Template Post Type: post, page, portfolio
+Template Name: Типы продуктов
+Template Post Type: page
 */
 
 get_header();
@@ -20,13 +20,21 @@ get_header();
 <section class="products_types">
   <div class="container">
 
+    <?php
+    if(pll_current_language('slug') == 'it') {
+      $lang_setup = ["PRODOTTI PER L'INDUSTRIA","/products/industrial/","PRODOTTI PER IL LABORATORIO","/products/laboratory/"];
+    } else if(pll_current_language('slug') == 'en') {
+      $lang_setup = ["PRODOTTI PER L'INDUSTRIA","/products/industrial/","PRODOTTI PER IL LABORATORIO","/products/laboratory/"];
+    }
+    ?>
+
     <div class="product_type product_type--white">
       <div class="head">
-        <p class="title text_size_xxl">PRODOTTI PER L'INDUSTRIA</p>
+        <p class="title text_size_xxl"><?= $lang_setup[0]; ?></p>
       </div>
       <div class="img_wrapper">
         <img src="/wp-content/themes/erredue/static/imgs/catalog/industrial_group.jpg" alt="">
-        <a href="#">
+        <a href="<?= $lang_setup[1]; ?>">
           <span><svg class="svg_icon"><use xlink:href="#plus_icon"></use></svg></span>
         </a>
       </div>
@@ -34,11 +42,11 @@ get_header();
 
     <div class="product_type product_type--blue">
       <div class="head">
-        <p class="title text_size_xxl">PRODOTTI PER IL LABORATORIO</p>
+        <p class="title text_size_xxl"><?= $lang_setup[2]; ?></p>
       </div>
       <div class="img_wrapper">
         <img src="/wp-content/themes/erredue/static/imgs/catalog/lab_group.jpg" alt="">
-        <a href="#">
+        <a href="<?= $lang_setup[3]; ?>">
           <span><svg class="svg_icon"><use xlink:href="#plus_icon"></use></svg></span>
         </a>
       </div>
