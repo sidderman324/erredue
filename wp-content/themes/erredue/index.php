@@ -17,9 +17,18 @@ get_header();
       <h1 class="title text_size_xxxl white bold"><?= get_field('promo_title'); ?></h1>
     </div>
 
+
+
     <div class="button_box">
-      <a href="#" class="btn btn--blue text_size_l btn--right-arrow">GAS PER LABORATORIO</a>
-      <a href="#" class="btn btn--white text_size_l btn--right-arrow">GAS INDUSTRIALI</a>
+      <?php
+      if(pll_current_language('slug') == 'it') {
+        $btns = ['GAS PER LABORATORIO','GAS INDUSTRIALI'];
+      } else if(pll_current_language('slug') == 'en') {
+        $btns = ['Gas for Laboratory','Gas for the Industry'];
+      }
+      ?>
+      <a href="#" class="btn btn--blue text_size_l btn--right-arrow"><?= $btns[0]; ?></a>
+      <a href="#" class="btn btn--white text_size_l btn--right-arrow"><?= $btns[1]; ?></a>
     </div>
 
   </div>

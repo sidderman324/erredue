@@ -14,7 +14,7 @@ if($type == 'small') {
 } else {
   $type = '';
 }
-echo $type;
+
 ?>
 
 <section class="promo promo--header <?= $type; ?>" style="background-image: url('<?= get_field('promo')['bgr_image']?>');">

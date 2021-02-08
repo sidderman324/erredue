@@ -2351,6 +2351,7 @@ body > p font.notetext {
 .promo .text_box,
 .image_bgr .text_box {
   margin-bottom: 3em;
+  max-width: 65%;
 }
 .promo .text_box .title span,
 .image_bgr .text_box .title span {
@@ -2447,6 +2448,7 @@ body > p font.notetext {
   padding: .6em .8em;
   position: relative;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .btn--blue {
   background-color: #1D52A5;
