@@ -7,34 +7,19 @@ Template Post Type: page
 get_header();
 ?>
 
-<section class="promo promo--header promo--header-small" style="background-image: url('/wp-content/themes/erredue/static/imgs/prodotti_head.jpg');">
-  <div class="container">
-
-    <div class="text_box">
-      <h1 class="title text_size_xxxl white bold"><span>///</span> PRODOTTI</h1>
-    </div>
-
-  </div>
-</section>
+<? get_template_part('promo'); ?>
 
 <section class="products_types">
-  <div class="container">
 
-    <?php
-    if(pll_current_language('slug') == 'it') {
-      $lang_setup = ["PRODOTTI PER L'INDUSTRIA","/products/industrial/","PRODOTTI PER IL LABORATORIO","/products/laboratory/"];
-    } else if(pll_current_language('slug') == 'en') {
-      $lang_setup = ["PRODOTTI PER L'INDUSTRIA","/products/industrial/","PRODOTTI PER IL LABORATORIO","/products/laboratory/"];
-    }
-    ?>
+  <div class="container">
 
     <div class="product_type product_type--white">
       <div class="head">
-        <p class="title text_size_xxl"><?= $lang_setup[0]; ?></p>
+        <p class="title text_size_xxl"><?= get_field('cards_group')['titles']['ind']; ?></p>
       </div>
       <div class="img_wrapper">
-        <img src="/wp-content/themes/erredue/static/imgs/catalog/industrial_group.jpg" alt="">
-        <a href="<?= $lang_setup[1]; ?>">
+        <img src="<?= get_field('cards_group')['images']['ind']; ?>" alt="">
+        <a href="<?= get_field('cards_group')['links']['ind']; ?>">
           <span><svg class="svg_icon"><use xlink:href="#plus_icon"></use></svg></span>
         </a>
       </div>
@@ -42,11 +27,11 @@ get_header();
 
     <div class="product_type product_type--blue">
       <div class="head">
-        <p class="title text_size_xxl"><?= $lang_setup[2]; ?></p>
+        <p class="title text_size_xxl"><?= get_field('cards_group')['titles']['labs']; ?></p>
       </div>
       <div class="img_wrapper">
-        <img src="/wp-content/themes/erredue/static/imgs/catalog/lab_group.jpg" alt="">
-        <a href="<?= $lang_setup[3]; ?>">
+        <img src="<?= get_field('cards_group')['images']['labs']; ?>" alt="">
+        <a href="<?= get_field('cards_group')['links']['labs']; ?>">
           <span><svg class="svg_icon"><use xlink:href="#plus_icon"></use></svg></span>
         </a>
       </div>

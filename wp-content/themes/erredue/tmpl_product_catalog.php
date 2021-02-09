@@ -8,28 +8,7 @@ get_header();
 ?>
 
 
-<?php
-$type = explode('_', get_field('promo')['type'])[0];
-if($type == 'small') {
-  $type = 'promo--header-small';
-} else {
-  $type = '';
-}
-?>
-
-<section class="promo promo--header <?= $type; ?>" style="background-image: url('<?= get_field('promo')['bgr_image']?>');">
-  <div class="container">
-
-    <div class="text_box">
-      <h1 class="title text_size_xxxl white bold"><span>///</span> <?= get_field('promo')['title']?></h1>
-
-      <div class="text text_size_l white bold">
-        <?= get_field('promo')['text']?>
-      </div>
-    </div>
-
-  </div>
-</section>
+<? get_template_part('promo'); ?>
 
 <section class="catalog">
   <div class="container">

@@ -8,7 +8,10 @@ get_header();
 
 ?>
 
-<?php global $post; $post_slug=$post->post_name; ?>
+<?php global $post; $post_slug=$post->post_name;
+$post_type = $post->post_type;
+?>
+
 
 <section class="product_card">
 
@@ -20,7 +23,21 @@ get_header();
       </div>
 
       <div class="text_box">
-        <a href="#" class="category_link text_size_xxl blue">PRODOTTI PER L'INDUSTRIA</a>
+
+        <?php
+        if(pll_current_language('slug') == 'it') {
+          $back_link = ["PRODOTTI PER L'INDUSTRIA","/products/industrial/","PRODOTTI PER IL LABORATORIO","/products/laboratory/"];
+        } else if(pll_current_language('slug') == 'en') {
+          $back_link = ["",""];
+        }
+        ?>
+
+        <?php if($post_type == 'product_labs') { ?>
+          <a href="<?= $back_link[3]; ?>" class="category_link text_size_xxl blue"><?= $back_link[2]; ?></a>
+        <? } else if($post_type == 'product_industr') { ?>
+          <a href="<?= $back_link[1]; ?>" class="category_link text_size_xxl blue"><?= $back_link[0]; ?></a>
+        <? } ?>
+
         <h1 class="title text_size_xxxl blue"><?= get_field('title'); ?></h1>
       </div>
     </div>
@@ -50,5 +67,7 @@ get_header();
         </div>
 
       </section>
+
+      <? get_template_part('feedback_form'); ?>
 
       <?php get_footer(); ?>

@@ -8,7 +8,7 @@ if(function_exists('register_nav_menus')){
 }
 
 
-// Добавление главного слайдера
+
 add_action( 'init', 'product_industr_item' ); // Использовать функцию только внутри хука init
 function product_industr_item() {
 	$labels = array(
@@ -40,7 +40,7 @@ function product_industr_item() {
 
 
 
-// Добавление главного слайдера
+
 add_action( 'init', 'product_labs_item' ); // Использовать функцию только внутри хука init
 function product_labs_item() {
 	$labels = array(
@@ -73,7 +73,7 @@ function product_labs_item() {
 
 
 
-// Добавление главного слайдера
+
 add_action( 'init', 'application' ); // Использовать функцию только внутри хука init
 function application() {
 	$labels = array(
@@ -103,6 +103,110 @@ function application() {
 	register_post_type( 'application', $args);
 }
 
+
+
+
+
+add_action( 'init', 'reference' ); // Использовать функцию только внутри хука init
+function reference() {
+	$labels = array(
+		'name' => 'Упоминания',
+		'singular_name' => 'Упоминания',
+		'add_new' => 'Добавить упоминание',
+		'add_new_item' => 'Добавить упоминание',
+		'edit_item' => 'Редактировать упоминание',
+		'new_item' => 'Новое упоминание',
+		'all_items' => 'Все упоминания',
+		'view_item' => 'Просмотр упоминаний на сайте',
+		'search_items' => 'Искать упоминания',
+		'not_found' => 'Упоминаний не найдено',
+		'not_found_in_trash' => 'В корзине нет упоминаний',
+		'menu_name' => 'Упоминания'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-format-aside',
+		'menu_position' => 4,
+		'has_archive' => true,
+		'show_in_rest' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt')
+		// 'taxonomies' => array('post_tag','category')
+	);
+	register_post_type( 'reference', $args);
+}
+
+
+
+
+
+
+
+
+
+
+// CASES
+
+add_action( 'init', 'case_industrial_item' ); // Использовать функцию только внутри хука init
+function case_industrial_item() {
+	$labels = array(
+		'name' => 'Кейсы индустриальные',
+		'singular_name' => 'Кейс индустриальный',
+		'add_new' => 'Добавить индустриальный кейс',
+		'add_new_item' => 'Добавить индустриальный кейс',
+		'edit_item' => 'Редактировать индустриальный кейс',
+		'new_item' => 'Новый индустриальный кейс',
+		'all_items' => 'Все индустриальные кейсы',
+		'view_item' => 'Просмотр индустриальных кейсов на сайте',
+		'search_items' => 'Искать индустриальный кейс',
+		'not_found' => 'Индустриальных кейсов не найдено.',
+		'not_found_in_trash' => 'В корзине нет индустриальных кейсов.',
+		'menu_name' => 'Кейсы индустриальные'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-block-default',
+		'menu_position' => 4,
+		'has_archive' => true,
+		'show_in_rest' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt')
+		// 'taxonomies' => array('post_tag','category')
+	);
+	register_post_type( 'case_industrial', $args);
+}
+
+
+
+
+add_action( 'init', 'case_labs_item' ); // Использовать функцию только внутри хука init
+function case_labs_item() {
+	$labels = array(
+		'name' => 'Кейсы лабораторные',
+		'singular_name' => 'Кейс лабораторный',
+		'add_new' => 'Добавить лабораторный кейс',
+		'add_new_item' => 'Добавить лабораторный кейс',
+		'edit_item' => 'Редактировать лабораторный кейс',
+		'new_item' => 'Новый лабораторный кейс',
+		'all_items' => 'Все лабораторные кейсы',
+		'view_item' => 'Просмотр лабораторных кейсов на сайте',
+		'search_items' => 'Искать лабораторный кейс',
+		'not_found' => 'Индустриальных кейсов не найдено.',
+		'not_found_in_trash' => 'В корзине нет лабораторных кейсов.',
+		'menu_name' => 'Кейсы лабораторные'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-block-default',
+		'menu_position' => 4,
+		'has_archive' => true,
+		'show_in_rest' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt')
+		// 'taxonomies' => array('post_tag','category')
+	);
+	register_post_type( 'case_labs', $args);
+}
 
 
 

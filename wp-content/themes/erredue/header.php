@@ -14,8 +14,6 @@
 
 <body>
 
-  <!-- Переключение языков -->
-
   <?php
   if(pll_current_language('slug') == 'it') {
     $link = '/';
@@ -23,7 +21,6 @@
     $link = '/en';
   }
   ?>
-
 
   <div class="page-header">
     <div class="container">
@@ -51,29 +48,19 @@
       }
       ?>
 
-      <?php  ?>
 
-      <!-- <nav class="main_menu"> -->
 
-      <!-- <ul>
-      <li><a href="#" class="main_menu_link">HOME</a></li>
-      <li><a href="#" class="main_menu_link">PROFILO AZIENDALE</a></li>
-      <li><a href="#" class="main_menu_link">PRODOTTI</a></li>
-      <li><a href="#" class="main_menu_link">APPLICAZIONI</a></li>
-      <li><a href="#" class="main_menu_link">INSTALLAZIONI</a></li>
-      <li><a href="#" class="main_menu_link">REFERENZE</a></li>
-      <li><a href="#" class="main_menu_link">CERTIFICAZIONI</a></li>
-      <li><a href="#" class="main_menu_link">CONTATTI</a></li>
-    </ul> -->
-    <!-- </nav> -->
-
-    <div class="lang_box">
-      <a href="/"><img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/flag_it.png" alt=""></a>
-      <a href="/en"><img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/flag_eng.png" alt=""></a>
-      <!-- <a href="#"><img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/flag_rus.png" alt=""></a> -->
+      <ul class="lang_box">
+        <?php pll_the_languages( array(
+          'show_flags' => 1,
+          'show_names' => 0
+        ) ); ?>
+        <!-- <a href="/"><img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/flag_it.png" alt=""></a>
+        <a href="/en"><img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/flag_eng.png" alt=""></a>
+        <!-- <a href="#"><img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/flag_rus.png" alt=""></a> -->
+      </ul>
     </div>
   </div>
-</div>
 
 
-<?php get_template_part('/_frontend/modules/svg_icons'); ?>
+  <?php get_template_part('/_frontend/modules/svg_icons'); ?>
