@@ -31,11 +31,26 @@
     min-height: 47.4em;
     justify-content: space-between;
     // padding-bottom: 3.5em;
+
+    @media (max-width: 700px) {
+      min-height: 33em;
+    }
+
+    @media (max-width: 1040px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .text_box {
     margin-bottom: 3em;
     max-width: 65%;
+
+    @media (max-width: 1040px) {
+      max-width: 100%;
+      width: 100%;
+    }
 
     .title {
       span {
@@ -53,6 +68,11 @@
     display: -ms-flex;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 1040px) {
+      margin-right: auto;
+    }
+
 
     .btn {
       margin-bottom: 1.2em;
@@ -88,6 +108,13 @@
   &--header-small {
     .container {
       min-height: 19.5em;
+
+      @media (max-width: 1040px) {
+        min-height: 16em;
+      }
+      @media (max-width: 700px) {
+        min-height: 13em;
+      }
 
       .text_box {
         max-width: 62em;
@@ -128,4 +155,14 @@
   background: @blue;
   padding: 2.7em;
   max-width: 45em;
+
+  @media (max-width: 1040px) {
+    max-width: 40em;
+    width: 100%;
+  }
+  @media (max-width: 700px) {
+    width: 100vw;
+    border-left: none;
+    border-right: none;
+  }
 }

@@ -12,6 +12,11 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 1040px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .text_box {
       display: -webkit-flex;
       display: -ms-flex;
@@ -19,6 +24,10 @@
       flex-direction: column;
       width: 51%;
       align-items: flex-start;
+
+      @media (max-width: 1040px) {
+        width: 100%;
+      }
 
       .section_title {
         text-transform: uppercase;
@@ -44,7 +53,7 @@
       }
     }
 
-    
+
 
 
     .produced_circle {
@@ -61,6 +70,10 @@
       font-weight: bold;
       margin-top: 0.7em;
       margin-right: 2.9em;
+
+      @media (max-width: 1040px) {
+        margin-right: 0;
+      }
     }
   }
 

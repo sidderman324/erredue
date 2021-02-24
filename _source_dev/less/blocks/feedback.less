@@ -2,9 +2,9 @@
 
 
 .feedback {
-  padding-bottom: 10em;
+  padding-bottom: 7em;
   background-color: #fff;
-  padding-top: 2em;
+  padding-top: 5em;
 
   .form_block {
     background-color: #fff;
@@ -12,15 +12,17 @@
 
     .head {
       background-color: @blue;
-      height: 6em;
+      min-height: 6em;
       display: -webkit-flex;
       display: -ms-flex;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0 1em;
 
       .title {
         font-weight: bold;
+        text-align: center;
       }
     }
 
@@ -32,9 +34,16 @@
       max-width: 65em;
       margin: 3.6em auto;
 
+      @media (max-width: 1040px) {
+        max-width: 90%;
+      }
+
       .column {
         width: 45%;
 
+        @media (max-width: 1040px) {
+          width: 48%;
+        }
       }
       .row {
         width: 100%;
@@ -87,6 +96,11 @@
 
 
 .custom_checkbox {
+
+  @media (max-width: 1040px) {
+    font-size: 1.2em;  
+  }
+
   input:invalid {
     box-shadow: none;
   }

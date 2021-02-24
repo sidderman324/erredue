@@ -66,4 +66,6 @@ get_header();
   </div>
 </section>
 
+<? get_template_part('feedback_form'); ?>
+
 <?php get_footer(); ?>

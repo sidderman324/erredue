@@ -12,8 +12,16 @@
     padding-top: 3em;
     padding-bottom: 3em;
 
+    @media (max-width: 1040px) {
+      flex-direction: column;
+    }
+
     .contacts_column {
       flex: 1;
+
+      @media (max-width: 1040px) {
+        margin-bottom: 2em;
+      }
 
       .section_title {
         font-size: 2.4875em;
@@ -27,6 +35,10 @@
         display: flex;
         align-items: center;
         margin-bottom: 2em;
+
+        @media (max-width: 1040px) {
+          margin-bottom: 1em;
+        }
 
         .svg_icon {
           width: 2.5em;

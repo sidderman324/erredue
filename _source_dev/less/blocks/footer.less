@@ -12,6 +12,10 @@
     flex-direction: row;
     justify-content: space-between;
 
+    @media (max-width: 1040px) {
+      flex-wrap: wrap;
+    }
+
     .column {
       width: 25%;
       display: -webkit-flex;
@@ -22,6 +26,11 @@
 
       @media (max-width: 1480px) {
         width: 25% !important;
+      }
+
+      @media (max-width: 1040px) {
+        width: 50% !important;
+        margin-bottom: 4em;
       }
 
       &:nth-child(1) {

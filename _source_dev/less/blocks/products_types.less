@@ -12,9 +12,25 @@
     justify-content: space-around;
     align-items: flex-start;
 
+    @media (max-width: 1040px) {
+      justify-content: space-between;
+    }
+    @media (max-width: 700px) {
+      justify-content: center;
+      flex-direction: column;
+    }
+
     .product_type {
       position: relative;
       width: 42.4%;
+
+      @media (max-width: 1040px) {
+        width: 48%;
+      }
+      @media (max-width: 700px) {
+        width: 100%;
+        margin-bottom: 2em;
+      }
 
       &:hover {
         a span {
@@ -71,8 +87,16 @@
         justify-content: center;
         padding: 1.4em;
 
+        @media (max-width: 1040px) {
+          text-align: center;
+        }
+
         p {
           font-weight: bold;
+
+          @media (max-width: 700px) {
+            font-size: 1.4em;
+          }
         }
       }
 

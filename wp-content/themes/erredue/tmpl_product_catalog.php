@@ -29,34 +29,34 @@ get_header();
       $slug = $production->post->post_name;
       ?>
 
-        <div class="catalog_card">
-          <div class="img_wrapper">
-            <img src="<?= get_field('catalog_image'); ?>" alt="">
-            <div class="hover"><svg class="svg_icon"><use xlink:href="#plus_icon"></use></svg></div>
-          </div>
+      <div class="catalog_card">
+      <div class="img_wrapper">
+      <img src="<?= get_field('catalog_image'); ?>" alt="">
+      <div class="hover"><svg class="svg_icon"><use xlink:href="#plus_icon"></use></svg></div>
+      </div>
 
-          <div class="text_box">
-            <div class="title_box">
-              <p class="title text_size_l"><?= get_field('title'); ?></p>
-            </div>
-            <?php if(get_field('short_description')) { ?>
-              <p class="text text_size_m"><?= get_field('short_description'); ?></p>
-            <?}?>
-          </div>
-
-          <a href="<?php the_permalink(); ?>" class="catalog_card_link"></a>
+      <div class="text_box">
+      <div class="title_box">
+      <p class="title text_size_l"><?= get_field('title'); ?></p>
+      </div>
+      <?php if(get_field('short_description')) { ?>
+        <p class="text text_size_m"><?= get_field('short_description'); ?></p>
+        <?}?>
         </div>
 
-    <?php endwhile; ?>
-  <?php endif; ?>
+        <a href="<?php the_permalink(); ?>" class="catalog_card_link"></a>
+        </div>
+
+        <?php endwhile; ?>
+        <?php endif; ?>
 
 
 
 
-</div>
-</div>
-</section>
+        </div>
+        </div>
+        </section>
 
 
 
-<?php get_footer(); ?>
+        <?php get_footer(); ?>

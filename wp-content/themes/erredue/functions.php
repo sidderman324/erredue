@@ -139,6 +139,38 @@ function reference() {
 
 
 
+add_action( 'init', 'certificats' ); // Использовать функцию только внутри хука init
+function certificats() {
+	$labels = array(
+		'name' => 'Сертификаты',
+		'singular_name' => 'Сертификаты',
+		'add_new' => 'Добавить сертификат',
+		'add_new_item' => 'Добавить сертификат',
+		'edit_item' => 'Редактировать сертификат',
+		'new_item' => 'Новое сертификат',
+		'all_items' => 'Все сертификаты',
+		'view_item' => 'Просмотр сертификатов на сайте',
+		'search_items' => 'Искать сертификаты',
+		'not_found' => 'Сертификатов не найдено',
+		'not_found_in_trash' => 'В корзине нет сертификатов',
+		'menu_name' => 'Сертификаты'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-awards',
+		'menu_position' => 4,
+		'has_archive' => true,
+		'show_in_rest' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt')
+		// 'taxonomies' => array('post_tag','category')
+	);
+	register_post_type( 'certificats', $args);
+}
+
+
+
+
 
 
 
@@ -225,5 +257,6 @@ function remove_admin_submenu_items() {
 	// remove_menu_page( 'users.php' );
 }
 add_action( 'admin_menu', 'remove_admin_submenu_items');
+
 
 ?>

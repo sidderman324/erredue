@@ -31,3 +31,4 @@
 /_service/node_modules
 /wp-content/languages
 /wp-content/upgrade
+*.pdf
