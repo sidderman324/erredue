@@ -54,13 +54,23 @@ $post_type = $post->post_type;
 
         <?if (get_field('gallery')) { ?>
 
-          <div class="gallery">
+          <div class="gallery" id="lightgallery">
 
             <?php foreach (get_field('gallery') as $key => $value) { ?>
-              <div class="gallery_item"><img src="<?= $value['image_item']; ?>" alt=""></div>
+              <div class="gallery_item" data-src="<?= $value['image_item']; ?>" data-sub-html="<h4><?= get_field('title'); ?></h4><p><?= get_field('short_description'); ?></p>">
+                <a href="<?= $value['image_item']; ?>">
+                  <img src="<?= $value['image_item']; ?>" alt="">
+                </a>
+              </div>
               <?}?>
 
             </div>
+
+            <script>
+                lightGallery(document.getElementById('lightgallery'), {
+                  thumbnail:false
+                });
+            </script>
 
             <?}?>
           </div>

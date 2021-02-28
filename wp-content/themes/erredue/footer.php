@@ -1,4 +1,4 @@
-<div class="page-footer">
+<footer class="page-footer">
   <div class="container">
 
     <?php
@@ -10,9 +10,22 @@
     ?>
 
   </div>
-</div>
+  <div class="develop">
+    <div class="container">
 
-<script src="<?= get_stylesheet_directory_uri() . '/static/js/script.min.js'; ?>"></script>
+      <?php
+      if(pll_current_language('slug') == 'it') { ?>
+        <a class="text_size_m" target="_blank" href="https://sergey-sidorov.ru/">Sviluppo e Design</a>
+      <? } else if(pll_current_language('slug') == 'en') { ?>
+        <a class="text_size_m" target="_blank" href="https://sergey-sidorov.ru/">Development and Design</a>
+      <?}?>
+
+
+    </div>
+  </div>
+</footer>
+
+
 
 <?php wp_footer(); ?>
 

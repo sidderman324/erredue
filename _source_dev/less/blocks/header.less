@@ -155,12 +155,19 @@
             left: 0;
             background-color: #000;
             opacity: .3;
+            display: none;
           }
         }
       }
 
       .lang-item.current-lang {
-        a:before { display: none; }
+        a:before {
+          // display: none;
+
+        }
+        a {
+          border-bottom: 2px solid @blue;
+        }
       }
     }
 

@@ -16,7 +16,7 @@ get_header();
     if(pll_current_language('slug') == 'it') {
       $lang_setup = ["SEDE DI LIVORNO","Contatti RAPPRESENTATE"];
     } else if(pll_current_language('slug') == 'en') {
-      $lang_setup = ["",""];
+      $lang_setup = ["HEADQUARTER IN LIVORNO","Representative contacts"];
     }
     ?>
 
@@ -65,6 +65,7 @@ get_header();
     </div>
   </div>
 </section>
+
 
 <? get_template_part('feedback_form'); ?>
 

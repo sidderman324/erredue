@@ -15,6 +15,8 @@
   <link rel="icon" href="<?= get_stylesheet_directory_uri(); ?>/static/imgs/favicons/favicon.png" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="16x16" href="<?= get_stylesheet_directory_uri(); ?>/static/imgs/favicons/favicon-16x16.png">
 
+  <script src="<?= get_stylesheet_directory_uri() . '/static/js/script.min.js'; ?>"></script>
+
 </head>
 
 <body>

@@ -9,6 +9,8 @@ if(function_exists('register_nav_menus')){
 
 
 
+
+
 add_action( 'init', 'product_industr_item' ); // Использовать функцию только внутри хука init
 function product_industr_item() {
 	$labels = array(

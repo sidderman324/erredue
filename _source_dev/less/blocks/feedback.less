@@ -94,24 +94,89 @@
 }
 
 
+.wpcf7 form .wpcf7-response-output {
+  font-size: 1.2em;
+  display: inline-flex;
+  width: auto;
+  flex-basis: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
 
 .custom_checkbox {
+  font-size: 1.2em;
 
   @media (max-width: 1040px) {
-    font-size: 1.2em;  
+    font-size: 1.2em;
   }
+
+
+
+  input[type="checkbox"] {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 15px;
+    width: 20px;
+  }
+  input[type="checkbox"]:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: -2px;
+    width: 20px;
+    height: 20px;
+    background: #fcfcfc;
+    border: 1px solid #1D52A5;
+    border-radius: 2px;
+  }
+
+
+  input[type="checkbox"]:checked:before {
+    background: #1D52A5;
+    border-color: #1D52A5;
+  }
+  input[type="checkbox"]:disabled {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+  input[type="checkbox"]:disabled:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+  input[type="checkbox"]:checked:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+
+
 
   input:invalid {
     box-shadow: none;
   }
   [type='checkbox']:not(:checked),
   [type='checkbox']:checked {
-    visibility: hidden;
-    opacity: 0;
+    // visibility: hidden;
+    // opacity: 0;
     position: absolute;
+    top: .2em;
+    left: 0;
+  }
+  .wpcf7-list-item {
+    margin: 0;
+    display: inline;
   }
   [type='checkbox']:not(:checked) + label,
-  [type='checkbox']:checked + label {
+  [type='checkbox']:checked + label,
+  label {
     outline: none !important;
     position: relative;
     padding-left: 2.8em;
@@ -119,7 +184,8 @@
     display: block;
   }
   [type='checkbox']:not(:checked) + label,
-  [type='checkbox']:checked + label {
+  [type='checkbox']:checked + label,
+  label {
     span {
       line-height: 1.3;
       a {

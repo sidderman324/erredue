@@ -132,10 +132,13 @@ gulp.task('js', function () {
       // dirs.source + '/js/jquery.nested.js',
       //dirs.source + '/js/isotope.pkgd.js',
       dirs.source + '/js/jquery-ui.min.js',
-      dirs.source + '/js/toastr.min.js',
-      //dirs.source + '/js/vue.js',
-      //dirs.source + '/js/html2pdf.bundle.js',
-      dirs.source + '/js/simplebar.min.js',
+      dirs.source + '/js/lightgallery.min.js',
+
+      dirs.source + '/js/lg-fullscreen.min.js',
+      dirs.source + '/js/lg-thumbnail.min.js',
+      dirs.source + '/js/lg-zoom.js',
+
+      // dirs.source + '/js/simplebar.min.js',
       dirs.source + '/js/swiper.js',
       dirs.source + '/js/script.js',
       ])
